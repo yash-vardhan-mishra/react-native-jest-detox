@@ -1,79 +1,36 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Project with Jest and Detox Testing
+=====================================================
 
-# Getting Started
+This project was created to practice writing basic test cases using Jest and `@testing-library/react-native`, as well as configuring Detox for end-to-end (e2e) testing. The project was developed on a Apple MacBook M3 Pro.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Getting Started
+---------------
 
-## Step 1: Start the Metro Server
+To run the project, follow these steps:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+1. Start the Metro Server by running `npm start` or `yarn start` from the root of the project.
+2. Open a new terminal and run `npm run ios` or `yarn ios` to start the iOS app.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Note: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-```bash
-# using npm
-npm start
+## Testing
+---------
 
-# OR using Yarn
-yarn start
-```
+This project includes Jest tests for unit testing and Detox tests for e2e testing. To run the tests, use the following commands:
 
-## Step 2: Start your Application
+* `npm run test` or `yarn test` to run Jest tests
+* `npx detox test --configuration ios.sim.debug` to run Detox e2e tests on iOS
+* `npx detox test --configuration android.emu.debug` to run Detox e2e tests on Android
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Building
+---------
 
-### For Android
+To build the project, use the following commands:
 
-```bash
-# using npm
-npm run android
+* `npx detox build --configuration ios.sim.debug` to build the iOS app
+* `npx detox build --configuration android.emu.debug` to build the Android app
 
-# OR using Yarn
-yarn android
-```
+## Apologies for the UI
+---------------------
 
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Please note that the UI of this project is not the main focus, and I apologize for its simplicity. The goal of this project was to practice testing with Jest and Detox, not to create a visually stunning app.
