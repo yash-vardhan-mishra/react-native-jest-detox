@@ -35,7 +35,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <Text>
+      <Text style={styles.textStyle}>
         we have following test cases
       </Text>
       <Component name="Yash" />
@@ -46,9 +46,11 @@ function App(): React.JSX.Element {
 }
 
 const styles = StyleSheet.create({
+  textStyle: {
+    alignSelf: 'center'
+  },
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center'
   },
 });
